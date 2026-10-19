@@ -64,7 +64,7 @@ test.describe("SauceDemo login credentials", () => {
   }
 
   for (const credentials of invalidCredentials) {
-    test.skip(`rejects ${credentials.name}`, async ({ page }) => {
+    test(`rejects ${credentials.name}`, async ({ page }) => {
       const loginPage = new login(page);
       await page.goto("https://www.saucedemo.com/", { waitUntil: "networkidle" });
       await loginPage.login(credentials.username, credentials.password);

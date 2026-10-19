@@ -5,7 +5,7 @@ import { login } from '../../pages/login';
 
 const authFile = path.resolve(__dirname, '../../../playwright/.auth/user.json');
 
-setup.skip('global-setup', async ({ page }) => {
+setup('global-setup', async ({ page }) => {
   const loginPage = new login(page);
 
   await page.goto('https://www.saucedemo.com/', { waitUntil: 'networkidle' });
