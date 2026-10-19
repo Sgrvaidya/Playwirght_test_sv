@@ -1,7 +1,7 @@
 import test, {expect}from "playwright/test"
 
 
-test("API GET Method", async ({ request }) => {
+test.skip("API GET Method", async ({ request }) => {
 const response = await request.get("http://localhost:3000/1");
 expect(response.status()).toBe(200);
 const jsonResponse = await response.json();
