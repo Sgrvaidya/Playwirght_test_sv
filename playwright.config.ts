@@ -33,7 +33,7 @@ export default defineConfig({
     actionTimeout: 5000,
 
     trace: 'on-first-retry',
-    headless: false,
+    headless: !!process.env.CI,
 
   },
 
